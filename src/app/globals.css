@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 
-.btn {
-    @apply bg-[#f8f9fa] 
-    text-gray-800 hover:ring-gray-200
-    w-36 h-10 rounded-md text-sm hover:ring-1 
-    hover:shadow-md focus:outline-none active:ring-gray-300
-    transition-shadow
+@layer components {
+
+    .btn {
+        @apply bg-[#f8f9fa] 
+        text-gray-800 hover:ring-gray-200
+        w-36 h-10 rounded-md text-sm hover:ring-1 
+        hover:shadow-md focus:outline-none active:ring-gray-300
+        transition-shadow
+    }
+
+    .link {
+        @apply hover:underline
+    }
 }
+
+

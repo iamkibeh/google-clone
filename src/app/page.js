@@ -14,6 +14,12 @@ const Home = () => {
             height={100}
             width={300}
             alt='google image'
+            style={
+              {
+                // width: 'auto',
+                // height: 'auto',
+              }
+            }
           />
           <HomeSearch />
         </div>

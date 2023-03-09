@@ -57,6 +57,10 @@ const HomeSearch = () => {
               className='text-center h-9'
               width={50}
               height={20}
+              style={{
+                width: 'auto',
+                height: '9',
+              }}
             />
           ) : (
             "I'm feeling lucky"
