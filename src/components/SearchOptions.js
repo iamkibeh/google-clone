@@ -16,7 +16,7 @@ export default function SearchOptions() {
     }
   }
   return (
-    <div className='flex space-x-2 border-b w-full justify-center lg:justify-start lg:pl-48 text-gray-800  text-xs'>
+    <div className='flex space-x-2 border-b w-full justify-center md:justify-start md:pl-[14%] lg:pl-48 text-gray-800  text-xs'>
       <div
         onClick={() => selectTab('web')}
         className={`flex items-center space-x-1 border-b-4 active:text-blue-600 cursor-pointer pb-3 px-2 border-transparent ${
