@@ -9,9 +9,10 @@ export default function PaginationButtons() {
   const searchParams = useSearchParams()
 
   const searchTerm = searchParams.get('search-term')
+  // const startIndex = +searchParams.get('start') || 1
   const startIndex = parseInt(searchParams.get('start')) || 1
 
-  console.log(typeof startIndex)
+  // console.log(typeof startIndex)
   return (
     <div className='flex justify-between text-blue-800 sm:justify-start sm:space-x-36'>
       {startIndex > 10 && (
