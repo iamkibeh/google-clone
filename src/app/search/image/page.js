@@ -3,10 +3,11 @@ import Link from 'next/link'
 
 const ImageSearchPage = async ({ searchParams }) => {
   const searchTerm = searchParams['search-term']
+  const startIndex = searchParams['start'] || 1
 
   // console.log(searchTerm)
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_SEARCH_ENGINE_ID}&q=${searchTerm}&searchType=image`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_SEARCH_ENGINE_ID}&q=${searchTerm}&searchType=image&start=${startIndex}`
   )
 
   if (!response.ok) {

@@ -4,9 +4,10 @@ import Link from 'next/link'
 const WebSearchPage = async ({ searchParams }) => {
   const searchTerm = searchParams['search-term']
 
-  // console.log(searchTerm)
+  const startIndex = searchParams.start || 1
+  console.log(startIndex)
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_SEARCH_ENGINE_ID}&q=${searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_SEARCH_ENGINE_ID}&q=${searchTerm}&start=${startIndex}`
   )
 
   if (!response.ok) {
